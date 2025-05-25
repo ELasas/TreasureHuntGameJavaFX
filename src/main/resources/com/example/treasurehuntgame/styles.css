@@ -1,0 +1,103 @@
+.root {
+    -fx-font-family: "Arial";
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-background-color: #6c3483;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 12px 24px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.button:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-opacity: 0.9;
+}
+
+.menu-button {
+    -fx-pref-width: 350px;
+    -fx-pref-height: 60px;
+    -fx-font-size: 18px;
+}
+
+.text-field, .password-field {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 12px;
+    -fx-background-radius: 10px;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #27ae60;
+    -fx-border-width: 2px;
+}
+
+.label {
+    -fx-font-size: 16px;
+}
+
+.label.title {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+.label.welcome {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.vbox {
+    -fx-padding: 20px;
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+}
+
+.hbox {
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+}
+
+.info-panel {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 12px;
+    -fx-padding: 10px;
+    -fx-spacing: 20px;
+}
+
+.scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.history-content {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 15px;
+    -fx-padding: 20px;
+}
+
+.history-box {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 10px;
+    -fx-padding: 10px;
+}
+
+.easy-button { -fx-background-color: #27ae60; }
+.medium-button { -fx-background-color: #f39c12; }
+.hard-button { -fx-background-color: #e74c3c; }
+.history-button { -fx-background-color: #8e44ad; }
+.logout-button { -fx-background-color: #7f8c8d; }
+.back-button { -fx-background-color: #8e44ad; }
+.menu-back-button { -fx-background-color: #e74c3c; }
