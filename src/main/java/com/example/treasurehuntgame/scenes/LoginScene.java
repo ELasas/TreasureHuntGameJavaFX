@@ -32,7 +32,7 @@ public class LoginScene {
         loginLayout.setPadding(new Insets(50));
         loginLayout.setStyle("-fx-background-color: linear-gradient(to bottom, #1c2526, #2f4f4f);");
 
-        Label titleLabel = new Label("🏴‍ TREASURE HUNT ️");
+        Label titleLabel = new Label("🏴‍️ TREASURE HUNT 🏴‍️");
         titleLabel.setFont(Font.font("Arial", FontWeight.BOLD, 36));
         titleLabel.setTextFill(Color.GOLD);
         titleLabel.getStyleClass().add("title");
@@ -107,7 +107,7 @@ public class LoginScene {
                 messageLabel
         );
 
-        Scene loginScene = new Scene(loginLayout, 600, 500);
+        Scene loginScene = new Scene(loginLayout, 800, 800);
         loginScene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/com/example/treasurehuntgame/styles.css")).toExternalForm());
         return loginScene;
     }

@@ -1,3 +1,4 @@
+
 package com.example.treasurehuntgame.game.core;
 
 import com.example.treasurehuntgame.TreasureHuntGame;
@@ -103,7 +104,7 @@ public class GameStateManager {
         }
 
         for (Enemy enemy : gameBoard.getEnemies()) {
-            if (Math.abs(gameBoard.getPlayer().x - enemy.x) <= 1 && Math.abs(gameBoard.getPlayer().y - enemy.y) <= 1) {
+            if (gameBoard.getPlayer().x == enemy.x && gameBoard.getPlayer().y == enemy.y) {
                 playerLives--;
                 if (playerLives <= 0) {
                     endGame(false);

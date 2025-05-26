@@ -86,14 +86,16 @@ public class MainMenuScene {
                 logoutButton
         );
 
-        Scene menuScene = new Scene(menuLayout, 600, 600);
+        Scene menuScene = new Scene(menuLayout, 800, 800);
         menuScene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/com/example/treasurehuntgame/styles.css")).toExternalForm());
         return menuScene;
     }
 
     public void setCurrentPlayer(String player) {
         this.currentPlayer = player;
-        welcomeLabel.setText("Welcome, " + currentPlayer + "!");
+        if (welcomeLabel != null) {
+            welcomeLabel.setText("Welcome, " + currentPlayer + "!");
+        }
     }
 
     public Scene getScene() {

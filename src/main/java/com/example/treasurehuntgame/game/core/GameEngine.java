@@ -1,3 +1,4 @@
+
 package com.example.treasurehuntgame.game.core;
 
 import com.example.treasurehuntgame.TreasureHuntGame;
@@ -33,7 +34,6 @@ public class GameEngine {
             gameUI = new GameUI(mainApp, gameBoard, gameRenderer, gameStateManager);
             gameStateManager.setGameStartTime(System.currentTimeMillis());
             gameUI.createGameStage();
-            startGameLoop();
         } catch (Exception e) {
             e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -43,10 +43,6 @@ public class GameEngine {
             alert.showAndWait();
             mainApp.returnToMainMenu();
         }
-    }
-
-    private void startGameLoop() {
-        gameStateManager.startGameLoop(gameRenderer, gameBoard);
     }
 
     public GameUI getGameUI() {

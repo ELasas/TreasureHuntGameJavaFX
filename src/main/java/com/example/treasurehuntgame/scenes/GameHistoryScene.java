@@ -21,7 +21,7 @@ import java.util.Objects;
 public class GameHistoryScene {
     private final TreasureHuntGame app;
     private final DatabaseManager dbManager;
-    private final Scene scene;
+    private Scene scene;
     private String currentPlayer;
 
     public GameHistoryScene(TreasureHuntGame app, DatabaseManager dbManager) {
@@ -44,6 +44,30 @@ public class GameHistoryScene {
 
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.getStyleClass().add("scroll-pane");
+        VBox historyContent = new VBox(10);
+        historyContent.setPadding(new Insets(20));
+        historyContent.getStyleClass().add("history-content");
+
+        Button backButton = new Button("🏠 BACK TO MENU");
+        backButton.getStyleClass().addAll("button", "back-button");
+        backButton.setOnAction(e -> app.showMainMenu());
+
+        historyLayout.getChildren().addAll(titleLabel, scrollPane, backButton);
+
+        Scene historyScene = new Scene(historyLayout, 800, 800);
+        historyScene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/com/example/treasurehuntgame/styles.css")).toExternalForm());
+        return historyScene;
+    }
+
+    public void setCurrentPlayer(String player) {
+        this.currentPlayer = player;
+        updateHistoryContent();
+    }
+
+    private void updateHistoryContent() {
+        VBox historyLayout = (VBox) scene.getRoot();
+        ScrollPane scrollPane = (ScrollPane) historyLayout.getChildren().get(1);
+
         VBox historyContent = new VBox(10);
         historyContent.setPadding(new Insets(20));
         historyContent.getStyleClass().add("history-content");
@@ -82,20 +106,6 @@ public class GameHistoryScene {
 
         scrollPane.setContent(historyContent);
         scrollPane.setMaxHeight(350);
-
-        Button backButton = new Button("🏠 BACK TO MENU");
-        backButton.getStyleClass().addAll("button", "back-button");
-        backButton.setOnAction(e -> app.showMainMenu());
-
-        historyLayout.getChildren().addAll(titleLabel, scrollPane, backButton);
-
-        Scene historyScene = new Scene(historyLayout, 700, 500);
-        historyScene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/com/example/treasurehuntgame/styles.css")).toExternalForm());
-        return historyScene;
-    }
-
-    public void setCurrentPlayer(String player) {
-        this.currentPlayer = player;
     }
 
     public Scene getScene() {
