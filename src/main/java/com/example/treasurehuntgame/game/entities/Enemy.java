@@ -1,4 +1,4 @@
-package com.example.treasurehuntgame.game;
+package com.example.treasurehuntgame.game.entities;
 
 public class Enemy {
     public int x, y;

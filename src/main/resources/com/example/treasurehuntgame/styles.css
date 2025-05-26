@@ -1,10 +1,10 @@
 .root {
-    -fx-font-family: "Arial";
-    -fx-text-fill: white;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: #e0e0e0;
 }
 
 .button {
-    -fx-background-color: #6c3483;
+    -fx-background-color: #2a5d7a;
     -fx-text-fill: white;
     -fx-font-weight: bold;
     -fx-font-size: 14px;
@@ -27,31 +27,39 @@
 }
 
 .text-field, .password-field {
-    -fx-background-color: rgba(255, 255, 255, 0.3);
-    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to bottom, #333333, #555555);
+    -fx-text-fill: #e0e0e0;
     -fx-font-size: 16px;
-    -fx-padding: 12px;
-    -fx-background-radius: 10px;
-    -fx-border-color: transparent;
-    -fx-border-width: 1px;
+    -fx-padding: 15px;
+    -fx-background-radius: 12px;
+    -fx-border-color: #ffd700;
+    -fx-border-width: 2px;
+    -fx-border-radius: 12px;
+}
+
+.text-field:hover, .password-field:hover {
+    -fx-background-color: linear-gradient(to bottom, #444444, #666666);
+    -fx-border-color: #ffeb3b;
 }
 
 .text-field:focused, .password-field:focused {
-    -fx-border-color: #27ae60;
-    -fx-border-width: 2px;
+    -fx-border-color: #ffeb3b;
+    -fx-border-width: 3px;
 }
 
 .label {
     -fx-font-size: 16px;
+    -fx-text-fill: #e0e0e0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 2, 0.5, 1, 1);
 }
 
 .label.title {
-    -fx-font-size: 36px;
+    -fx-font-size: 40px;
     -fx-font-weight: bold;
 }
 
 .label.welcome {
-    -fx-font-size: 28px;
+    -fx-font-size: 32px;
     -fx-font-weight: bold;
 }
 
@@ -67,7 +75,7 @@
 }
 
 .info-panel {
-    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-color: rgba(255, 255, 255, 0.18);
     -fx-background-radius: 12px;
     -fx-padding: 10px;
     -fx-spacing: 20px;
@@ -83,7 +91,7 @@
 }
 
 .history-content {
-    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-color: rgba(255, 255, 255, 0.18);
     -fx-background-radius: 15px;
     -fx-padding: 20px;
 }
@@ -94,10 +102,10 @@
     -fx-padding: 10px;
 }
 
-.easy-button { -fx-background-color: #27ae60; }
-.medium-button { -fx-background-color: #f39c12; }
-.hard-button { -fx-background-color: #e74c3c; }
-.history-button { -fx-background-color: #8e44ad; }
-.logout-button { -fx-background-color: #7f8c8d; }
-.back-button { -fx-background-color: #8e44ad; }
-.menu-back-button { -fx-background-color: #e74c3c; }
+.easy-button { -fx-background-color: #4caf50; }
+.medium-button { -fx-background-color: #ff9800; }
+.hard-button { -fx-background-color: #d32f2f; }
+.history-button { -fx-background-color: #6a1b9a; }
+.logout-button { -fx-background-color: #546e7a; }
+.back-button { -fx-background-color: #6a1b9a; }
+.menu-back-button { -fx-background-color: #d32f2f; }

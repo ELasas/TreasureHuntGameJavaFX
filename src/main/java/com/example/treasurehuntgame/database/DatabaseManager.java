@@ -80,7 +80,6 @@ public class DatabaseManager {
             }
         }
 
-        // Create tables without IDENTITY columns
         try {
             String createUsersTable = """
             CREATE TABLE users (
@@ -118,7 +117,6 @@ public class DatabaseManager {
             }
         }
 
-        // Create triggers for auto-increment
         try {
             String usersTrigger = """
             CREATE OR REPLACE TRIGGER users_trigger
@@ -234,7 +232,7 @@ public class DatabaseManager {
     }
 
     private String hashPassword(String password) {
-        // Simple hash for demo - in production use proper hashing like BCrypt
+
         return Integer.toString(password.hashCode());
     }
 
