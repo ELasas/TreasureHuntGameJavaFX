@@ -1,4 +1,3 @@
-
 package com.example.treasurehuntgame.game.ui;
 
 import com.example.treasurehuntgame.game.core.GameDifficulty;
@@ -53,7 +52,9 @@ public class GameBoard {
                 traps.add(new Trap(3, 3));
                 for (int x = 0; x < gridWidth; x++) {
                     for (int y = 0; y < gridHeight; y++) {
-                        walls[x][y] = (x == 4 && y >= 2 && y <= 6 && !(x == 4 && y == 4));
+                        walls[x][y] = (x == 4 && y >= 2 && y <= 6 && !(x == 4 && y == 4)) ||
+                                (y == 7 && x >= 2 && x <= 7 && x != 5) ||
+                                (x == 6 && y >= 3 && y <= 8 && y != 6);
                     }
                 }
                 break;
@@ -68,7 +69,11 @@ public class GameBoard {
                 traps.add(new Trap(8, 8));
                 for (int x = 0; x < gridWidth; x++) {
                     for (int y = 0; y < gridHeight; y++) {
-                        walls[x][y] = (x == 7 && y >= 3 && y <= 12 && y != 10) || (y == 7 && x >= 3 && x <= 12 && x != 10);
+                        walls[x][y] = (x == 7 && y >= 3 && y <= 12 && y != 10) ||
+                                (y == 7 && x >= 3 && x <= 12 && x != 10) ||
+                                (x == 10 && y >= 2 && y <= 8 && y != 5) ||
+                                (y == 4 && x >= 8 && x <= 13 && x != 11) ||
+                                (x == 5 && y >= 8 && y <= 13 && y != 11);
                     }
                 }
                 break;
@@ -85,7 +90,12 @@ public class GameBoard {
                 traps.add(new Trap(17, 17));
                 for (int x = 0; x < gridWidth; x++) {
                     for (int y = 0; y < gridHeight; y++) {
-                        walls[x][y] = (x == 9 && y >= 5 && y <= 15 && y != 12) || (y == 9 && x >= 5 && x <= 15 && x != 12);
+                        walls[x][y] = (x == 9 && y >= 5 && y <= 15 && y != 12) ||
+                                (y == 9 && x >= 5 && x <= 15 && x != 12) ||
+                                (x == 12 && y >= 3 && y <= 17 && y != 10) ||
+                                (y == 13 && x >= 4 && x <= 16 && x != 8) ||
+                                (x == 6 && y >= 10 && y <= 18 && y != 15) ||
+                                (y == 16 && x >= 5 && x <= 14 && x != 10);
                     }
                 }
                 break;
